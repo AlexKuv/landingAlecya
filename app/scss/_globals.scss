@@ -1,0 +1,49 @@
+// global styles
+body {
+    color: $mainColor;
+    font-size: 18px;
+    @extend %roboto-light;
+  }
+  
+  .container {
+    width: 1170px;
+    margin: auto;
+  }
+  
+  .title {
+    font-size: 36px;
+    line-height: 48px;
+    color: $secondColor;
+    @extend %playfair;
+  }
+  
+  .button {
+    position: relative;
+    padding: 15px 35px;
+    border-radius: 40px;
+    background: linear-gradient(180deg, #53419A 0%, #5229F5 100%);
+    color: #fff;
+    border: none;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: '';
+      background: linear-gradient(180deg, #7251f7 0%, #4019db 100%);
+      opacity: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      transition: opacity 0.3s;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  
+  
