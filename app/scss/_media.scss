@@ -1,0 +1,18 @@
+@media (max-width: 996px) {
+  .head-block {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 922px) {
+  .header__link--mail,
+  .header__nav {
+    display: none;;
+  }
+  .header__burger {
+    display: block;
+  }
+  .header__nav-wrapper {
+    display: flex;
+  }
+}

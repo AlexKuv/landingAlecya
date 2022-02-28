@@ -1,13 +1,23 @@
 // global styles
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
 body {
     color: $mainColor;
     font-size: 18px;
     @extend %roboto-light;
+    position: relative;
+    overflow-x: hidden;
   }
   
   .container {
-    width: 1170px;
+    max-width: 1210px;
+    width: 100%;
     margin: auto;
+    padding: 0 20px;
   }
   
   .title {
