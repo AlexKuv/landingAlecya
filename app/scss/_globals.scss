@@ -1,16 +1,23 @@
 // global styles
 * {
   box-sizing: border-box;
-}
-html {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 body {
+    width:100vw;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
     color: $mainColor;
     font-size: 18px;
     @extend %roboto-light;
     position: relative;
-    overflow-x: hidden;
+  }
+
+  .page-inner {
+    width: 100%;
+    overflow: hidden;
   }
   
   .container {
@@ -56,4 +63,23 @@ body {
     }
   }
   
-  
+  .carousel {
+    &__prev,
+    &__next {
+      border: 1px solid $secondColor;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      transition: all .3s;
+      path {
+        transition: all .3s;
+      }
+      &:hover {
+        border: 1px solid $mainColor;
+        path {
+          fill: $mainColor;
+        }
+      }
+    }
+  }
