@@ -7,7 +7,10 @@
   }
   .about__content {
     max-width: 450px;
-}
+  }
+  .example__title {
+    max-width: 550px;
+  }
 }
 
 @media (max-width: 996px) {
@@ -41,6 +44,9 @@
 }
 
 @media (max-width: 769px) {
+  .bg {
+    background-image: url('../img/bg_mob.svg');
+  }
   .title {
     font-size: 26px;
   }
@@ -88,6 +94,90 @@
   .blockquote__text {
     font-size: 26px;
   }
+  .expectation__wrapper {
+    margin-bottom: 80px;
+  }
+  .expectation__block {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .expectation__disclaimer {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  .example {
+    margin-bottom: 80px;
+  }
+  .example__title {
+    max-width: 100%;
+    padding-left: 55px;
+  }
+  .example__title::before  {
+    left: 0;
+  }
+  .advantages {
+    margin-bottom: 80px;
+  }
+  .example .slider-control,
+  .reviews .slider-control {
+    top: 50%;
+    z-index: 10;
+  }
+  .request__wrapper {
+    flex-direction: column;
+  }
+  .request__img-wrap {
+    max-width: 345px;
+  }
+  .request__img-wrap::after {
+    width: 370px;
+    height: 540px;
+  }
+  .request__img-wrap::before {
+    width: 479px;
+    height: 370px;
+  }
+  .request__form {
+    max-width: 470px;
+    width: auto;
+  }
+  
+}
+
+@media (max-width: 580px) {
+  .reviews__title {
+    margin-bottom: 50px;
+  }
+  .reviews__img {
+    max-width: 380px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    overflow-x: hidden;
+  }
+  .about__img-wrap {
+    max-width: 310px;
+  }
+  .expectation__title {
+    padding-left: 55px;
+    margin-bottom: 40px;
+  }
+  .expectation__title::after {
+    left: 0;
+    top: 0;
+  }
+  .faq__title {
+    padding-left: 55px;
+    margin-bottom: 40px;
+  }
+  .faq__title::before {
+    left: 0;
+    top: 0;
+  }
 }
 
 @media (max-width: 426px) {
@@ -124,6 +214,10 @@
   .advantages__list-item::after {
     transform: scale(0.9);
   }
+  .faq__item-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 376px) {
@@ -156,5 +250,9 @@
   }
   .advantages__list-item {
     margin: 20px 0;
+  }
+  .faq__item-title::after {
+    top: 0;
+    right: 0;
   }
 }

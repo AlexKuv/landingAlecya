@@ -21,14 +21,42 @@ $('.slider').slick({
   infinity: true,
   slidesToShow: 4,
   prevArrow: '.example__prev',
-  nextArrow: '.example__next'
+  nextArrow: '.example__next',
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
 });
 
 $('.slider-reviews').slick({
   infinity: true,
   slidesToShow: 4,
   prevArrow: '.reviews__prev',
-  nextArrow: '.reviews__next'
+  nextArrow: '.reviews__next',
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
 });
 
 // faq accordion
@@ -63,7 +91,24 @@ function sendForm() {
     formData.forEach((val, key) => {
       body[key] = val;
     });
-    console.log(body);
+    fetch('./server.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+    .then((response) => {
+      if(response.status === 200) {
+        form.querySelectorAll('input').forEach(i => i.value = '');
+      } else {
+        form.querySelectorAll('input').forEach(i => i.value = '');
+        console.error(response.status);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    })
   });
 }
 

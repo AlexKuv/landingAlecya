@@ -214,6 +214,9 @@
       bottom: -100px;
     }
   }
+  &__social-wrapper {
+    text-align: end;
+  }
   &__social-link {
     text-decoration: none;
     &:not(last-child) {
@@ -408,6 +411,7 @@
   }
   &__card-description {
     padding: 18px 14px;
+    background-color: #fff;
   }
   &__button {
     display: flex !important;
@@ -430,6 +434,7 @@
 .faq {
   margin-bottom: 100px;
   &__title {
+
     display: block;
     margin: auto;
     width: fit-content;
@@ -511,6 +516,9 @@
       left: -55px;
 
     }
+  }
+  &__img {
+    width: 100%;
   }
   .slider-control {
     position: absolute;
